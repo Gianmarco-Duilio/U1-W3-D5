@@ -407,7 +407,13 @@ selezioneTagTd();
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
-
+const selezioneTd = () => {
+  const tagTd = document.getElementsByTagName("td");
+  for (let i = 0; i < tagTd.length; i++) {
+    console.log(tagTd[i].innerHTML);
+  }
+};
+selezioneTd();
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
