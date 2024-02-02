@@ -425,7 +425,7 @@ coloraLinkPagina();
 */
 
 const aggNewElmtUl = () => {
-  const mylist = document.getElementById("myLyst");
+  const mylist = document.getElementById("myList");
 
   const newElemnt = document.createElement("li");
   newElemnt.innerText = "nuovo elemento";
@@ -436,11 +436,22 @@ aggNewElmtUl();
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
+const svuotaLista = () => {
+  const myList = document.getElementById("myList");
+  myList.removeChild(myList.firstChild);
+};
+svuotaLista();
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
-
+const aggTagTr = () => {
+  const tuttiTr = document.querySelectorAll("tr");
+  tuttiTr.forEach((tr) => {
+    tr.classList.add("test");
+  });
+};
+aggTagTr();
 // [EXTRA] JS Avanzato
 
 /* ESERCIZIO 27
